@@ -47,4 +47,9 @@ public class spawner : MonoBehaviour {
 			yield return new WaitForSeconds (spawnWait);
 		}
 	}
+
+	//execute params means that whatever the masterFreqGen obj sends to a particular spawner, execute those parameters
+	void executeParams() {
+
+	}
 }
