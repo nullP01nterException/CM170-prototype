@@ -1,0 +1,16 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\titleScreenUI.cs">
+    <Files>
+      <File FileName="Assets\Scripts\movement.cs" Line="26" Column="2" />
+      <File FileName="Assets\Scripts\cameraMovement.cs" Line="10" Column="9" />
+      <File FileName="Assets\Scripts\spawner.cs" Line="43" Column="16" />
+      <File FileName="Assets\Scripts\obstacleMovement.cs" Line="14" Column="110" />
+      <File FileName="Assets\Scripts\titleScreenUI.cs" Line="4" Column="35" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
