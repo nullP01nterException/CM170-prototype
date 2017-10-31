@@ -2,10 +2,13 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\masterFreqGenerator.cs">
     <Files>
-      <File FileName="Assets\Scripts\spawner.cs" Line="53" Column="3" />
-      <File FileName="Assets\Scripts\createSpawners.cs" Line="22" Column="24" />
-      <File FileName="Assets\Kstuff\Scripts2\AudioPeer.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\masterFreqGenerator.cs" Line="20" Column="3" />
+      <File FileName="Assets\Scripts\spawner.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\createSpawners.cs" Line="12" Column="4" />
+      <File FileName="Assets\Scripts\masterFreqGenerator.cs" Line="56" Column="28" />
+      <File FileName="Assets\Kevinstuff-PleaseNoTouch\Scripts2\AudioPeer.cs" Line="9" Column="39" />
+      <File FileName="Assets\Kevinstuff-PleaseNoTouch\Scripts2\InstantiateCubes.cs" Line="30" Column="45" />
+      <File FileName="Assets\Scripts\obstacleMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\titleScreenUI.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

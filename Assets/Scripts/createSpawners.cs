@@ -8,8 +8,10 @@ public class createSpawners : MonoBehaviour {
 	public GameObject spawner2;
 	public GameObject spawner3;
 
-	public List<GameObject> spawnerList;
-	public static createSpawners current;
+	public static List<GameObject> spawnerList;
+	//public static createSpawners current;
+
+	public static bool ready = false;
 	// Use this for initialization
 	void Start () {
 		spawnerList = new List<GameObject> ();
@@ -21,6 +23,9 @@ public class createSpawners : MonoBehaviour {
 		spawnerList.Add (obj2);
 		spawnerList.Add (obj3);
 
+		if (spawnerList.Count == 3) {
+			ready = true;
+		}
 	}
 	
 	// Update is called once per frame
