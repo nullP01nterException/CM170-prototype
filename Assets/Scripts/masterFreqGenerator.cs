@@ -11,6 +11,7 @@ public class masterFreqGenerator : MonoBehaviour {
 	public int startWait;
 	public bool stop;
 
+	//public GameObject audioPeer;
 	//grab all static params
 	//createSpawners.current.spawnerList
 	//Audiopeer._samples
@@ -19,7 +20,7 @@ public class masterFreqGenerator : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		//yield return new WaitForSeconds (startWait);
-		StartCoroutine (waveSpawner ());
+		//StartCoroutine (waveSpawner ());
 		stop = false;
 	}
 	
@@ -28,12 +29,13 @@ public class masterFreqGenerator : MonoBehaviour {
 		
 	}
 
-	IEnumerator waveSpawner() {
-
+	public IEnumerator waveSpawner() {
+		Debug.Log ("Starting routine");
 		yield return new WaitForSeconds (startWait);
-
+		//audioPeer.GetComponent<AudioPeer>().playAudio ();
 		if (createSpawners.ready) {
 			while (!stop) {
+				Debug.Log ("infreq");
 				//right now its spawning after x amount of time
 
 				//frequency:

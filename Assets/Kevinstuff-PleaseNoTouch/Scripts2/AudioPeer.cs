@@ -11,20 +11,55 @@ public class AudioPeer : MonoBehaviour {
 
 	public static float[] _freqBand = new float[8];
 
+	public static AudioClip yourAudioClip;
+
+	public GameObject masterGenerator;
+
+	public bool haveSource = false;
+
 	// Use this for initialization
 	void Start () {
 		_audioSource = GetComponent<AudioSource> ();
 		//sampleNumber = 1024;
+		//haveSource = false;
+
+		if (yourAudioClip != null) {
+			//setting clip
+			setAudioSource(yourAudioClip);
+
+
+			haveSource = true;
+			playAudio ();
+		}
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		GetSpectrumAudioSource ();
-		MakeFrequencyBands ();
+
+			
+		if (haveSource == true) {
+			GetSpectrumAudioSource ();
+		}
+
+		//MakeFrequencyBands ();
+		
+		
 	}
 
 	void GetSpectrumAudioSource() {
+		Debug.Log ("getting spec");
 		_audioSource.GetSpectrumData (_samples, 0, FFTWindow.Blackman);
+	}
+
+	public void setAudioSource(AudioClip audio) {
+		_audioSource.clip = audio;
+	}
+
+	public void playAudio() {
+		if (_audioSource != null) {
+			_audioSource.Play ();
+			StartCoroutine (masterGenerator.GetComponent<masterFreqGenerator> ().waveSpawner());
+		}
 	}
 
 	void MakeFrequencyBands() {

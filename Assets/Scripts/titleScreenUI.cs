@@ -13,7 +13,7 @@ public class titleScreenUI : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.anyKey) {
-			SceneManager.LoadScene ("demoScene");
+			SceneManager.LoadScene ("chooseSong");
 		}
 	}
 }
