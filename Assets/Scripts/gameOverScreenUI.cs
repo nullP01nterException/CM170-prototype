@@ -12,9 +12,9 @@ public class gameOverScreenUI : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(KeyCode.R))
+        if (Input.anyKey)
         {
-            SceneManager.LoadScene("demoScene");
+            SceneManager.LoadScene("chooseSong");
         }
     }
 }

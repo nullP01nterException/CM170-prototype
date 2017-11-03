@@ -9,11 +9,11 @@ public class choosingSong : MonoBehaviour {
 	public List<AudioClip> AudioList = new List<AudioClip>();
 	// Use this for initialization
 	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        Cursor.visible = true;
+    }
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 

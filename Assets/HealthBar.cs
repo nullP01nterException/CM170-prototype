@@ -9,15 +9,21 @@ public class HealthBar : MonoBehaviour {
     public  GameManager theGameManager;
     //public Text ratioText;
 
-    private float hitpoints = 100;
-    private float maxHitpoint = 100;
+    public GameObject audioSource;
+    private AudioLowPassFilter lpf;
+
+    public float hitpoints = 100;
+    public float maxHitpoint = 100;
 
 	// Use this for initialization
 	void Start () {
         UpdateHealthbar();
-	}
 
-    private void UpdateHealthbar()
+        lpf = audioSource.GetComponent<AudioLowPassFilter>();
+        lpf.cutoffFrequency = 22000;
+    }
+
+    public void UpdateHealthbar()
     {
         float ratio = hitpoints / maxHitpoint;
         currentHealthbar.rectTransform.localScale = new Vector3(ratio, 1, 1);
@@ -26,6 +32,7 @@ public class HealthBar : MonoBehaviour {
     
     private void TakeDamage(float damage)
     {
+        lpf.cutoffFrequency /= 1.5f;
         hitpoints -= damage;
         if (hitpoints < 0)
         {
@@ -35,6 +42,7 @@ public class HealthBar : MonoBehaviour {
         }
         UpdateHealthbar();
     }
+    
     
     private void HealDamage(float heal)
     {

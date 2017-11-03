@@ -30,12 +30,12 @@ public class masterFreqGenerator : MonoBehaviour {
 	}
 
 	public IEnumerator waveSpawner() {
-		Debug.Log ("Starting routine");
+		//Debug.Log ("Starting routine");
 		yield return new WaitForSeconds (startWait);
 		//audioPeer.GetComponent<AudioPeer>().playAudio ();
 		if (createSpawners.ready) {
 			while (!stop) {
-				Debug.Log ("infreq");
+				//Debug.Log ("infreq");
 				//right now its spawning after x amount of time
 
 				//frequency:
@@ -66,8 +66,8 @@ public class masterFreqGenerator : MonoBehaviour {
 				} else {
 					spawnWait = 1 - avgFreq;
 				}*/
-				Debug.Log("spawnAwait Amount: " + spawnWait);
-				Debug.Log("freqMax: " + freqMax);
+				//Debug.Log("spawnAwait Amount: " + spawnWait);
+				//Debug.Log("freqMax: " + freqMax);
 
 				//spawnWait = Random.Range (spawnLeastWait, spawnMostWait);
 				yield return new WaitForSeconds (spawnWait);

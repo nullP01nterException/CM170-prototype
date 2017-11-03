@@ -16,13 +16,25 @@ public class CollideHealthDown : MonoBehaviour {
         }
     }
 
+    private void OnCollisionEnter(Collision col)
+    {
+        if (col.gameObject.tag == "Player")
+        {
+            Debug.Log("You are hit 2");
+            Destroy(this);
+            //HealthBar.TakeCollisionHit();
+            col.gameObject.GetComponent<HealthBar>().hitpoints -= 25;
+            // col.gameObject.GetComponent<HealthBar>().UpdateHealthbar(); 
+        }
+    }
+
     // Use this for initialization
     //void Start () {
-		
-	//}
-	
-	// Update is called once per frame
-	//void Update () {
-		
-	//}
+
+    //}
+
+    // Update is called once per frame
+    //void Update () {
+
+    //}s
 }

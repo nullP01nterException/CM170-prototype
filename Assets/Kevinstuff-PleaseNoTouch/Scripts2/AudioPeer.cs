@@ -47,7 +47,7 @@ public class AudioPeer : MonoBehaviour {
 	}
 
 	void GetSpectrumAudioSource() {
-		Debug.Log ("getting spec");
+		//Debug.Log ("getting spec");
 		_audioSource.GetSpectrumData (_samples, 0, FFTWindow.Blackman);
 	}
 
