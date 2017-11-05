@@ -1,15 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\choosingSong.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Prefab\Kevin_stuff\RoadScript.cs">
     <Files>
       <File FileName="Assets\Scripts\spawner.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\createSpawners.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\masterFreqGenerator.cs" Line="14" Column="4" />
+      <File FileName="Assets\Scripts\masterFreqGenerator.cs" Line="1" Column="1" />
       <File FileName="Assets\Kevinstuff-PleaseNoTouch\Scripts2\AudioPeer.cs" Line="14" Column="16" />
-      <File FileName="Assets\Kevinstuff-PleaseNoTouch\Scripts2\InstantiateCubes.cs" Line="30" Column="45" />
-      <File FileName="Assets\Scripts\obstacleMovement.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\titleScreenUI.cs" Line="13" Column="36" />
-      <File FileName="Assets\Scripts\choosingSong.cs" Line="23" Column="3" />
+      <File FileName="Assets\Kevinstuff-PleaseNoTouch\Scripts2\InstantiateCubes.cs" Line="10" Column="16" />
+      <File FileName="Assets\Prefab\Kevin_stuff\RoadScript.cs" Line="11" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -51,13 +51,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\CollideHealthDown.cs" />
+     <Compile Include="Assets\GameManager.cs" />
+     <Compile Include="Assets\HealthBar.cs" />
      <Compile Include="Assets\Kevinstuff-PleaseNoTouch\Scripts2\AudioPeer.cs" />
      <Compile Include="Assets\Kevinstuff-PleaseNoTouch\Scripts2\InstantiateCubes.cs" />
      <Compile Include="Assets\Kevinstuff-PleaseNoTouch\Scripts2\Param.cs" />
+     <Compile Include="Assets\Prefab\Kevin_stuff\RoadScript.cs" />
      <Compile Include="Assets\Scripts\AudioHelper.cs" />
      <Compile Include="Assets\Scripts\cameraMovement.cs" />
      <Compile Include="Assets\Scripts\choosingSong.cs" />
      <Compile Include="Assets\Scripts\createSpawners.cs" />
+     <Compile Include="Assets\Scripts\effectManager.cs" />
+     <Compile Include="Assets\Scripts\gameOverScreenUI.cs" />
      <Compile Include="Assets\Scripts\ImageInfo.cs" />
      <Compile Include="Assets\Scripts\masterFreqGenerator.cs" />
      <Compile Include="Assets\Scripts\movement.cs" />
