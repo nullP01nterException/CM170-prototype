@@ -6,6 +6,7 @@ using UnityEngine;
 public class AudioPeer : MonoBehaviour {
 
 	public AudioSource _audioSource;
+
 	public static int sampleNumber = 1024;
 	public static float[] _samples = new float[sampleNumber];
 

@@ -10,7 +10,7 @@ public class masterFreqGenerator : MonoBehaviour {
 
 	public int startWait;
 	public bool stop;
-
+	public static float avgFreq;
 	//public GameObject audioPeer;
 	//grab all static params
 	//createSpawners.current.spawnerList
@@ -49,6 +49,7 @@ public class masterFreqGenerator : MonoBehaviour {
 						freqMax = AudioPeer._samples [i];
 					}
 				}
+				avgFreq = freqAmount;
 				//higher the freq, faster the spawn
 				//lower the freq average, longer it takes to spawn
 				spawnFreq = 1/((freqAmount / AudioPeer.sampleNumber) * 2000f);
