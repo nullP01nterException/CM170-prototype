@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar : MonoBehaviour {
+public class HealthBar : MonoBehaviour
+{
 
     public Image currentHealthbar;
-    public  GameManager theGameManager;
-    //public Text ratioText;
+    public GameManager theGameManager;
+    //public Material materialHealthbar;
+    public Color highHealthColor;
+    public Color halfHealthColor;
+    public Color quarterHealthColor;
+    //public Text debugText;
 
     public GameObject audioSource;
     private AudioLowPassFilter lpf;
@@ -15,8 +20,9 @@ public class HealthBar : MonoBehaviour {
     public float hitpoints = 100;
     public float maxHitpoint = 100;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         UpdateHealthbar();
 
         lpf = audioSource.GetComponent<AudioLowPassFilter>();
@@ -27,9 +33,32 @@ public class HealthBar : MonoBehaviour {
     {
         float ratio = hitpoints / maxHitpoint;
         currentHealthbar.rectTransform.localScale = new Vector3(ratio, 1, 1);
-        // ratioText.text = (ratio*100)
+        // print("ratio " + ratio);
+        //debugText.text = ratio.ToString(); // =(ratio * 100).ToString() + '%';
+        if (ratio <= 0.25f) // probably will want to tweak this
+        {
+            // set Healthbar color to red
+            if (currentHealthbar.color != quarterHealthColor)
+            {
+                currentHealthbar.color = quarterHealthColor;
+            }
+        }
+        else if (ratio <= 0.5f) // probably will want to tweak this
+        {
+            // set Healthbar color to yellow
+            if (currentHealthbar.color != halfHealthColor)
+            {
+                currentHealthbar.color = halfHealthColor;
+            }
+
+        }
+        else
+        {
+            // set Healthbar color to green
+            currentHealthbar.color = highHealthColor;
+        }
     }
-    
+
     private void TakeDamage(float damage)
     {
         lpf.cutoffFrequency /= 1.5f;
@@ -42,14 +71,14 @@ public class HealthBar : MonoBehaviour {
         }
         UpdateHealthbar();
     }
-    
-    
+
+
     private void HealDamage(float heal)
     {
 
     }
-	
-	// Update is called once per frame
-	//void Update () {	
-	//}
+
+    // Update is called once per frame
+    //void Update () {	
+    //}
 }
