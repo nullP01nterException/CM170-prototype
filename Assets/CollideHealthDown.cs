@@ -6,14 +6,17 @@ public class CollideHealthDown : MonoBehaviour {
 
     public bool isHit;
     public float damage = 20;
+	//public float damage = 0.001f;
 
-    public void OnTriggerStay(Collider col)
+    public void OnTriggerEnter(Collider col)
     {
-        if (col.tag == "Player")
-        {
-            Debug.Log("You are hit");
-            col.SendMessage((isHit) ? "TakeDamage" : "HealDamage", Time.deltaTime * damage);
-        }
+		if (col.tag == "Player") {
+			Debug.Log ("You are hit");
+			col.SendMessage ((isHit) ? "TakeDamage" : "HealDamage", Time.deltaTime * damage);
+			Destroy (this);
+		} else {
+			Destroy (this);
+		}
     }
 
     private void OnCollisionEnter(Collision col)

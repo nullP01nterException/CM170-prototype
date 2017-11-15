@@ -60,14 +60,17 @@
      <Compile Include="Assets\Prefab\Kevin_stuff\RoadScript.cs" />
      <Compile Include="Assets\Scripts\AudioHelper.cs" />
      <Compile Include="Assets\Scripts\cameraMovement.cs" />
+     <Compile Include="Assets\Scripts\ChargeBar.cs" />
      <Compile Include="Assets\Scripts\choosingSong.cs" />
      <Compile Include="Assets\Scripts\createSpawners.cs" />
      <Compile Include="Assets\Scripts\effectManager.cs" />
      <Compile Include="Assets\Scripts\gameOverScreenUI.cs" />
+     <Compile Include="Assets\Scripts\gameWinScreenUI.cs" />
      <Compile Include="Assets\Scripts\ImageInfo.cs" />
      <Compile Include="Assets\Scripts\masterFreqGenerator.cs" />
      <Compile Include="Assets\Scripts\movement.cs" />
      <Compile Include="Assets\Scripts\obstacleMovement.cs" />
+     <Compile Include="Assets\Scripts\ShieldPlayer.cs" />
      <Compile Include="Assets\Scripts\spawner.cs" />
      <Compile Include="Assets\Scripts\titleScreenUI.cs" />
  <Reference Include="UnityEngine.UI">

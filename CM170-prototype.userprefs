@@ -1,0 +1,22 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\ChargeBar.cs">
+    <Files>
+      <File FileName="Assets\CollideHealthDown.cs" Line="16" Column="19" />
+      <File FileName="Assets\GameManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\HealthBar.cs" Line="35" Column="78" />
+      <File FileName="Assets\Scripts\gameOverScreenUI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\AudioHelper.cs" Line="1" Column="1" />
+      <File FileName="Assets\Kevinstuff-PleaseNoTouch\Scripts2\AudioPeer.cs" Line="75" Column="53" />
+      <File FileName="Assets\Scripts\gameWinScreenUI.cs" Line="1" Column="1" />
+      <File FileName="Assets\Prefab\Kevin_stuff\RoadScript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ShieldPlayer.cs" Line="11" Column="36" />
+      <File FileName="Assets\Scripts\movement.cs" Line="8" Column="32" />
+      <File FileName="Assets\Scripts\ChargeBar.cs" Line="25" Column="3" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

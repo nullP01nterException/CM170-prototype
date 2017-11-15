@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent (typeof (AudioSource))]
 public class AudioPeer : MonoBehaviour {
@@ -10,13 +11,14 @@ public class AudioPeer : MonoBehaviour {
 	public static int sampleNumber = 1024;
 	public static float[] _samples = new float[sampleNumber];
 
-	public static float[] _freqBand = new float[8];
+	public static float[] _freqBand = new float[64];
 
 	public static AudioClip yourAudioClip;
 
 	public GameObject masterGenerator;
 
 	public bool haveSource = false;
+	public float duration = 0.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -30,7 +32,12 @@ public class AudioPeer : MonoBehaviour {
 
 
 			haveSource = true;
-			playAudio ();
+
+			if (duration > 0.0f) {
+				playAudio ();
+				StartCoroutine (WaitForEnd ());
+			}
+
 		}
 	}
 	
@@ -44,7 +51,7 @@ public class AudioPeer : MonoBehaviour {
 
 		//MakeFrequencyBands ();
 		
-		
+		//if (haveSource && 
 	}
 
 	void GetSpectrumAudioSource() {
@@ -54,6 +61,7 @@ public class AudioPeer : MonoBehaviour {
 
 	public void setAudioSource(AudioClip audio) {
 		_audioSource.clip = audio;
+		duration = audio.length;
 	}
 
 	public void playAudio() {
@@ -62,6 +70,16 @@ public class AudioPeer : MonoBehaviour {
 			StartCoroutine (masterGenerator.GetComponent<masterFreqGenerator> ().waveSpawner());
 		}
 	}
+
+	IEnumerator WaitForEnd() {
+		yield return new WaitForSeconds (duration + 2.0f);
+		SceneManager.LoadScene("gameWinScene");
+	}
+	void stopRoutine() {
+
+	}
+
+
 
 	void MakeFrequencyBands() {
 		/*
@@ -77,12 +95,12 @@ public class AudioPeer : MonoBehaviour {
 		 * 7-256 = 11008 Hz, 10923-21930
 		 */
 		int count = 0;
-		for (int i = 0; i < 8; i++) {
+		for (int i = 0; i < 64; i++) {
 
 			float average = 0;
 			int sampleCount = (int)Mathf.Pow (2, i) * 2;
 
-			if (i == 7) {
+			if (i == 63) {
 				sampleCount += 2;
 			}
 

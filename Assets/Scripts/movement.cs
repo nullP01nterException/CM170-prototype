@@ -31,7 +31,7 @@ public class movement : MonoBehaviour {
 
 		if (Physics.Raycast (transform.position, Vector3.down, out hit, 200f)) {
 			heightAboveRoad = hit.distance;
-			Debug.Log ("Height above: " + heightAboveRoad);
+			//Debug.Log ("Height above: " + heightAboveRoad);
 			if (heightAboveRoad != heightAbove) {
 				Vector3 newPos = new Vector3 (transform.position.x, transform.position.y - heightAboveRoad + heightAbove, transform.position.z);
 				transform.position = newPos;
@@ -40,6 +40,6 @@ public class movement : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(Collider collisionInfo){
-		print ("here");
+		//print ("here");
 	}
 }
