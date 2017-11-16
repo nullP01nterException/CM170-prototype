@@ -32,11 +32,11 @@ public class ChargeBar : MonoBehaviour {
 		//if points is < 100f, means its charging. at 100, its charged
 		if (points < 100f/adjustFactor) {
 			points += ratioOfHeal;
-			Debug.Log ("points " + points);
+			//Debug.Log ("points " + points);
 			float ratio = (points / maxpoint) * adjustFactor;
 
 			if (ratio < 1f) {
-				Debug.Log ("ratio" + ratio);
+				//Debug.Log ("ratio" + ratio);
 				bar.rectTransform.localScale = new Vector3(ratio, 1, 1);
 			}
 

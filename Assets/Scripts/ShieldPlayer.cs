@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShieldPlayer : MonoBehaviour {
 
-	public bool active;
+	public static bool active;
 	public bool readyToUse;
 	public Vector3 playerpos;
 	public float activeTime;
@@ -46,7 +46,7 @@ public class ShieldPlayer : MonoBehaviour {
 	}
 
 	IEnumerator toggleOff() {
-		yield return new WaitForSeconds (10.0f);
+		yield return new WaitForSeconds (5.0f);
 		this.gameObject.transform.localScale = new Vector3 (0.001f, 0.001f, 0.001f);
 		this.transform.localPosition = new Vector3 (-100f, -100f, -100f);
 		active = false;

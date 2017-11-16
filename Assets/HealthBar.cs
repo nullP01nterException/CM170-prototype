@@ -17,8 +17,13 @@ public class HealthBar : MonoBehaviour
     public GameObject audioSource;
     private AudioLowPassFilter lpf;
 
+	public float dmg = 8;
     public float hitpoints = 100;
     public float maxHitpoint = 100;
+	float ratioDmg;
+
+	float cutOffMark;
+	float ratioOfMark;
 
     // Use this for initialization
     void Start()
@@ -27,7 +32,19 @@ public class HealthBar : MonoBehaviour
 
         lpf = audioSource.GetComponent<AudioLowPassFilter>();
         lpf.cutoffFrequency = 22000;
+
+		//ie if dmg = 8 and hitpoints = 100, 0.08 percent is taken
+		ratioDmg = dmg/maxHitpoint;
     }
+
+	void FixedUpdate() {
+		/*if (hitpoints < 100) {
+
+			//1.5 multiplier
+				hitpoints += 0.02f;
+				
+		}*/
+	}
 
     public void UpdateHealthbar()
     {
@@ -59,17 +76,24 @@ public class HealthBar : MonoBehaviour
         }
     }
 
-    private void TakeDamage(float damage)
+    private void TakeDamage()
     {
-        lpf.cutoffFrequency /= 1.5f;
-        hitpoints -= damage;
-        if (hitpoints < 0)
-        {
-            hitpoints = 0;
-            Debug.Log("You are Dead, Dead, Dead");
-            theGameManager.RestartGame();
-        }
-        UpdateHealthbar();
+		if (!ShieldPlayer.active) {
+			this.GetComponent<EmitterHit> ().toggleHit ();
+			float cutFreqAt = lpf.cutoffFrequency / 1.5f;
+			lpf.cutoffFrequency = cutFreqAt;
+			//Debug.Log ("cutoff " + lpf.cutoffFrequency);
+			hitpoints -= dmg;
+			Debug.Log ("hitpoints " + hitpoints);
+			if (hitpoints < 0)
+			{
+				hitpoints = 0;
+				//Debug.Log("You are Dead, Dead, Dead");
+				theGameManager.RestartGame();
+			}
+			UpdateHealthbar();
+		}
+
     }
 
 
