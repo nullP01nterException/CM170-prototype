@@ -44,9 +44,19 @@ public class RoadScript : MonoBehaviour {
 			//vertices [2 * i] = newVecPos1;
 			float newVal = InstantiateCubes._sampleCube [i].transform.localScale.y/factor;
 
-			if (newVal > 1.5f) {
-				newVal = 1.5f;
+			if (i == 3) {
+				//Debug.Log ("new val " + newVal);
 			}
+			float oldValue = vertices [2 * i].y;
+			float adValue = Mathf.Abs (oldValue) - Mathf.Abs (newVal);
+			if (adValue > 0.2f || adValue < -0.2f) {
+				newVal /= 2f;
+				/*if (i == 3) {
+					Debug.Log ("newnew val " + newVal);
+				}*/
+			}
+
+
 			vertices [2*i].y = newVal;
 			vertices [(2*i)+1].y = newVal;
 			//Vector3 vecPos2 = localToWorld.MultiplyPoint3x4(vertices [(2*i)+1]);

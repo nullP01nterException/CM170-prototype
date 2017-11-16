@@ -61,6 +61,10 @@ public class masterFreqGenerator : MonoBehaviour {
 					spawnWait = spawnFreq + ((freqMax / spawnFreq)/100f);
 				}
 
+				if (spawnWait > 1f && avgFreq != 0.0f) {
+					spawnWait = 1f;
+				}
+
 				//spawnWait = avgFreq;
 				/*if (avgFreq > 0.5f) {
 					spawnWait = avgFreq;

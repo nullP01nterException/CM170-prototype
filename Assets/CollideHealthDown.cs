@@ -12,7 +12,7 @@ public class CollideHealthDown : MonoBehaviour {
     {
 		if (col.tag == "Player") {
 			Debug.Log ("You are hit");
-			col.SendMessage ((isHit) ? "TakeDamage" : "HealDamage", Time.deltaTime * damage);
+			col.SendMessage ((isHit) ? "TakeDamage" : "HealDamage");
 			Destroy (this);
 		} else {
 			Destroy (this);
