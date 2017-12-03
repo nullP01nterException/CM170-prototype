@@ -4,5 +4,9 @@
 # Game Objects based on audio data
 # Level design using MIDI
 
-# Good reference for MIDI parsing in Unity C#
+MIDI file specification links
+http://www.somascape.org/midi/tech/mfile.html
+
+Good reference for MIDI parsing in Unity C#
 https://pastebin.com/cHhZcUWQ
+
